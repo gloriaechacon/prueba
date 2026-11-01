@@ -16,7 +16,7 @@
   guide.replaceChildren();
   const heading=document.createElement('h2');heading.textContent=info[0];
   const purpose=document.createElement('p');purpose.textContent=info[1];
-  const design=document.createElement('p');design.className='view-direction';design.textContent=version==='original'?'Referencia actual para comparar con las propuestas.':version==='c'?'Portada editorial de A y páginas independientes: explorador aéreo, viviendas 3D, destinos fotográficos e inversión por pasos.':info[version==='a'?2:3];
+  const design=document.createElement('p');design.className='view-direction';design.textContent=version==='original'?'Referencia actual para comparar con las propuestas.':version==='d'?'Recorrido visual por destinos, terrenos, casas 3D y dossier por capítulos. Conserva el diseño de la propuesta del otro chat.':version==='c'?'Portada editorial de A y páginas independientes: explorador aéreo, viviendas 3D, destinos fotográficos e inversión por pasos.':info[version==='a'?2:3];
   const next=document.createElement('button');next.type='button';const keys=Object.keys(views),index=keys.indexOf(key);next.textContent=index===keys.length-1?'Volver a la portada':'Siguiente vista';
   next.addEventListener('click',()=>{section.value=keys[(index+1)%keys.length];section.dispatchEvent(new Event('change'));});
   const copy=document.createElement('div');copy.append(heading,purpose,design);guide.append(copy,next);

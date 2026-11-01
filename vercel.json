@@ -6,6 +6,10 @@
   "outputDirectory": "public",
   "routes": [
     {
+      "src": "^/d/?$",
+      "dest": "/d/index.html"
+    },
+    {
       "src": "^/a/?$",
       "dest": "/a/index.html"
     },
